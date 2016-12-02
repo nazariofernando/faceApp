@@ -11,4 +11,4 @@ var config = {
 
 firebase.initializeApp(config);
 
-angular.module('faceapp', ["firebase"]);
+angular.module('faceapp', ["firebase", "ngRoute"]);

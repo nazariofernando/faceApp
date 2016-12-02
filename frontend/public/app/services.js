@@ -19,12 +19,9 @@ angular.module('faceapp')
 
 	var original_url = $firebaseObject(ref.child('url'));
 
-	console.log(original_url.$value)
 
 	var originalPic = {
-		url: function(cb) {
-			
-		},
+		"url": original_url,
 		save: function(file) {
 			var task = original.put(file);
 			task.on('state_changed',

@@ -25,12 +25,11 @@
   <!-- angularjs cdn-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-route.js"></script>
+
   <!-- firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
-  <!-- 
-  <script>
-    
-  </script> -->
+  
 
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
@@ -40,36 +39,24 @@
   <script src="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/js/Jcrop.js"></script>
   <link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/css/Jcrop.css" type="text/css">
 
+  <script>
+    
+  </script>
+
 </head>
 <body class="nihilo" ng-app="faceapp">
 
-  <div ng-controller="mainCtrl">
-
-    <div class="header" ng-controller="headerCtrl">
+  <div class="header" ng-controller="headerCtrl">
 
       <form class="upload-pic">
         <input type="file" name="pic1" value="upload" accept="image/*" id="fileButton"><br>
       </form>
 
-    </div>
-
-    <div class="frames">
-      
-      <div class="frame" id="first-frame">
-        <img id="first-img"></img>
-      </div>
-
-      <div class="frame" id="second-frame">
-        <canvas id="second-frame-canvas"></canvas>
-      </div>
-
-      <div class="frame" id="third-frame">
-        <canvas id="third-frame-canvas"></canvas>
-      </div>
-
-    </div>
-
   </div>
+  
+  <ng-view></ng-view>
+
+
 
 
 
@@ -102,6 +89,7 @@
   <script src="app/index.js"></script>
   <script src="app/controllers.js"></script>
   <script src="app/services.js"></script>
+  <script src="app/config.js"></script>
 
 </body>
 </html>
