@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+  <meta charset="UTF-8">
+  <title>Inpaint</title>
+
+  <!-- themes for image 
+  <link rel="stylesheet" href="https://js.arcgis.com/3.18/dijit/themes/nihilo/nihilo.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css"> -->
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/frames.css">
+
+  <!-- js script 
+  <script src="https://js.arcgis.com/3.18/"></script>
+  <script src="js/load_image.js"></script> -->
+
+  <!-- angularjs cdn-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+  <!-- 
+  <script>
+    
+  </script> -->
+
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+  <!-- JQquery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/js/Jcrop.js"></script>
+  <link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/css/Jcrop.css" type="text/css">
+
+</head>
+<body class="nihilo" ng-app="faceapp">
+
+  <div ng-controller="mainCtrl">
+
+    <div class="header" ng-controller="headerCtrl">
+
+      <form class="upload-pic">
+        <input type="file" name="pic1" value="upload" accept="image/*" id="fileButton"><br>
+      </form>
+
+    </div>
+
+    <div class="frames">
+      
+      <div class="frame" id="first-frame">
+        <img id="first-img"></img>
+      </div>
+
+      <div class="frame" id="second-frame">
+        <canvas id="second-frame-canvas"></canvas>
+      </div>
+
+      <div class="frame" id="third-frame">
+        <canvas id="third-frame-canvas"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline'">
+  <div id="header" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
+    <span>Draw:<br /></span>
+    <button data-dojo-type="dijit/form/Button">Polygon</button>
+    <button data-dojo-type="dijit/form/Button">Freehand Polyline</button>
+    <button data-dojo-type="dijit/form/Button">Freehand Polygon</button>
+
+    <button data-dojo-type="dijit/form/Button">Arrow</button>
+    <button data-dojo-type="dijit/form/Button">Triangle</button>
+    <button data-dojo-type="dijit/form/Button">Circle</button>
+    <button data-dojo-type="dijit/form/Button">Ellipse</button>
+  </div>
+  <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+</div>
+-->
+
+  <!-- angular scripts -->
+  <script src="app/index.js"></script>
+  <script src="app/controllers.js"></script>
+  <script src="app/services.js"></script>
+
+</body>
+</html>
