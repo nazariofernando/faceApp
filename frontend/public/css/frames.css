@@ -1,5 +1,7 @@
 .frames {
 
+	
+
 }
 
 	.frames .frame {
@@ -7,5 +9,7 @@
 		display: inline-block;
 
 		width: 32%;
+
+		height: 100%;
 
 	}

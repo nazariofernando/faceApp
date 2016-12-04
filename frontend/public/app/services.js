@@ -39,6 +39,15 @@ angular.module('faceapp')
 				}
 
 			)
+		},
+		saveCor: function(x, y, x2, y2, w) {
+			var updates = {};
+			updates['/leftX'] = x;
+			updates['/upY'] = y;
+			updates['/rightX'] = x2;
+			updates['/downY'] = y2;
+			updates['/width'] = w;
+			ref.update(updates);
 		}
 	}
 

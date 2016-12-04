@@ -1,6 +1,9 @@
 
 'use strict';
 
+(function() {
+
+
 angular.module('faceapp')
 
 .controller('mainCtrl', function($scope) {
@@ -28,30 +31,40 @@ angular.module('faceapp')
 
 	$scope.originalSrc = originalUrl.$value;
 
-	/*
+	var options = { bgOpacity: 0.7 };
+	var jcrop_api;
+	var first_img = $('#first-img');
+	//first_img[0].crossOrigin = "Anonymous";
 
-	$('#first-img').Jcrop({
-		setSelect: [ 50,50,100,100 ],
-	  aspectRatio: 1
+	first_img.Jcrop(options,function(){
+	  jcrop_api = this;
+	  init_interface();
 	});
 
-	$('#first-img').on('cropstart cropmove cropend',function(e,s,c){
+	function init_interface(){
+	  $('#selectThing').on('click',function(e){
+		var cor = jcrop_api.getSelection();
+		GetOriginalPic.saveCor(cor.x, cor.y, cor.x2, cor.y2, cor.w);
+	  });
+	}
 
-	  console.log(e,s,c);
-	  // @todo: do something useful with c
-	  // { x: 10, y: 10, x2: 30, y2: 30, w: 20, h: 20 }
-	  // c.x, c.y, c.w, c.h, ...
-	  // or access s.selectionApiMethod() or s.core.apiMethod() etc
-	  // compare event type with e.type (e.g. in if conditional, switch block)
+	$('#first-frame').append("<canvas style='display:none' id='first-canvas'></canvas>");
+	var first_canvas = $("#first-canvas")
+	var ctx1 = first_canvas[0].getContext('2d');
+	var imgData1;
 
-	});
-
-	$('#first-img').on('cropmove cropend',function(e,s,c){
-	  $('#cropx').val(c.x);
-	});
-
-	*/
+	first_img[0].onload = function() {
+		first_canvas[0].height = first_img[0].height;
+		first_canvas[0].width = first_img[0].width;
+		ctx1.drawImage(first_img[0], 0, 0, first_img[0].width, first_img[0].height);
+		//localStorage.setItem("savedImageData", first_canvas[0].toDataURL("image/png") );
+		imgData1 = ctx1.getImageData(0, 0, first_img[0].width, first_img[0].height);
+	} 
 
 })
+
+})();
+
+
 
 ;

@@ -9,6 +9,17 @@
   <meta charset="UTF-8">
   <title>Inpaint</title>
 
+  <!--
+  <IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+      </IfModule>
+  </IfModule>
+  -->
+
   <!-- themes for image 
   <link rel="stylesheet" href="https://js.arcgis.com/3.18/dijit/themes/nihilo/nihilo.css">
   <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css"> -->
@@ -34,14 +45,14 @@
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 
+  <!--
+  <link  href="../bower_components/cropperjs/dist/cropper.css" rel="stylesheet">
+  <script src="../bower_components/cropperjs/dist/cropper.js"></script> -->
+
   <!-- JQquery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/js/Jcrop.js"></script>
   <link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/css/Jcrop.css" type="text/css">
-
-  <script>
-    
-  </script>
 
 </head>
 <body class="nihilo" ng-app="faceapp">
@@ -55,35 +66,6 @@
   </div>
   
   <ng-view></ng-view>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline'">
-  <div id="header" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'">
-    <span>Draw:<br /></span>
-    <button data-dojo-type="dijit/form/Button">Polygon</button>
-    <button data-dojo-type="dijit/form/Button">Freehand Polyline</button>
-    <button data-dojo-type="dijit/form/Button">Freehand Polygon</button>
-
-    <button data-dojo-type="dijit/form/Button">Arrow</button>
-    <button data-dojo-type="dijit/form/Button">Triangle</button>
-    <button data-dojo-type="dijit/form/Button">Circle</button>
-    <button data-dojo-type="dijit/form/Button">Ellipse</button>
-  </div>
-  <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
-</div>
--->
 
   <!-- angular scripts -->
   <script src="app/index.js"></script>
