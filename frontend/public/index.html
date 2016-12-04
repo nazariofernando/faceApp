@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width,user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
 
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-  <meta charset="UTF-8">
-  <title>Inpaint</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Inpaint</title>
 
-  <!--
-  <IfModule mod_setenvif.c>
-    <IfModule mod_headers.c>
-        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
-            SetEnvIf Origin ":" IS_CORS
-            Header set Access-Control-Allow-Origin "*" env=IS_CORS
-        </FilesMatch>
-      </IfModule>
-  </IfModule>
-  -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/frames.css">
 
-  <!-- themes for image 
-  <link rel="stylesheet" href="https://js.arcgis.com/3.18/dijit/themes/nihilo/nihilo.css">
-  <link rel="stylesheet" href="https://js.arcgis.com/3.18/esri/css/esri.css"> -->
+    <!-- JQquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/header.css">
-  <link rel="stylesheet" type="text/css" href="css/frames.css">
+    <!-- JCrop -->
+    <script src="Jcrop-WIP-2.x/js/JCrop.js"></script>
+    <link rel="stylesheet" href="Jcrop-WIP-2.x/css/Jcrop.css" type="text/css">
 
-  <!-- js script 
-  <script src="https://js.arcgis.com/3.18/"></script>
-  <script src="js/load_image.js"></script> -->
+    <!-- angularjs cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 
-  <!-- angularjs cdn-->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-route.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular-route.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
 
-  <!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
-  
+  </head>
+  <body class="nihilo" ng-app="faceapp">
 
-  <!-- AngularFire -->
-  <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <div class="header" ng-controller="headerCtrl">
 
-  <!--
-  <link  href="../bower_components/cropperjs/dist/cropper.css" rel="stylesheet">
-  <script src="../bower_components/cropperjs/dist/cropper.js"></script> -->
+        <form class="upload-pic">
+          <input type="file" name="pic1" value="upload" accept="image/*" id="fileButton">
+        </form>
 
-  <!-- JQquery -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/js/Jcrop.js"></script>
-  <link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/css/Jcrop.css" type="text/css">
+    </div>
 
-</head>
-<body class="nihilo" ng-app="faceapp">
+    <ng-view></ng-view>
 
-  <div class="header" ng-controller="headerCtrl">
+    <!-- angular scripts -->
+    <script src="app/index.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/config.js"></script>
 
-      <form class="upload-pic">
-        <input type="file" name="pic1" value="upload" accept="image/*" id="fileButton"><br>
-      </form>
-
-  </div>
-  
-  <ng-view></ng-view>
-
-  <!-- angular scripts -->
-  <script src="app/index.js"></script>
-  <script src="app/controllers.js"></script>
-  <script src="app/services.js"></script>
-  <script src="app/config.js"></script>
-
-</body>
+  </body>
 </html>

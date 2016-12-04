@@ -34,7 +34,7 @@ angular.module('faceapp')
 	var options = { bgOpacity: 0.7 };
 	var jcrop_api;
 	var first_img = $('#first-img');
-	//first_img[0].crossOrigin = "Anonymous";
+	first_img[0].crossOrigin = "Anonymous";
 
 	first_img.Jcrop(options,function(){
 	  jcrop_api = this;
