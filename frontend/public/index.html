@@ -14,13 +14,6 @@
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/frames.css">
 
-    <!-- JQquery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-    <!-- JCrop -->
-    <script src="Jcrop-WIP-2.x/js/JCrop.js"></script>
-    <link rel="stylesheet" href="Jcrop-WIP-2.x/css/Jcrop.css" type="text/css">
-
     <!-- angularjs cdn-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
 
@@ -31,6 +24,18 @@
     
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+
+    <!-- JQquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!--JCrop -->
+    <!-- first way -->
+    <script src="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/js/Jcrop.js"></script>
+    <link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v2.0.0-RC1/css/Jcrop.css" type="text/css">
+
+    <!-- second way 
+    <script type="text/javascript" src="Jcrop-WIP-2.x/js/JCrop.js"></script>
+    <link rel="stylesheet" href="Jcrop-WIP-2.x/css/Jcrop.css" type="text/css">  -->
 
   </head>
   <body class="nihilo" ng-app="faceapp">
@@ -47,9 +52,10 @@
 
     <!-- angular scripts -->
     <script src="app/index.js"></script>
+    <script src="app/config.js"></script>
     <script src="app/controllers.js"></script>
     <script src="app/services.js"></script>
-    <script src="app/config.js"></script>
+    
 
   </body>
 </html>

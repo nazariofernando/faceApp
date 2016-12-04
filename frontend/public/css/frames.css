@@ -1,15 +1,31 @@
 .frames {
 
-	
+	width: 100%;
+	height: 100%;
 
 }
 
-	.frames .frame {
+	.frame {
+
+		margin-top: 5px;
+		margin-left: 10px;
 
 		display: inline-block;
 
-		width: 32%;
+		border: 1px solid black;
 
-		height: 100%;
+	}
+
+		.frame img {
+
+			width: 100%;
+
+		}
+
+		.frame canvas {
+
+		}
+
+	.frames button {
 
 	}

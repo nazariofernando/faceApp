@@ -1,5 +1,7 @@
 'use strict';
 
+//do not change anything here
+
 (function() {
 
 	var config = {
@@ -11,8 +13,6 @@
 };
 
 firebase.initializeApp(config);
-
-
 
 angular.module('faceapp', ["firebase", "ngRoute"]);
 	
